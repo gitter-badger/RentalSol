@@ -12,12 +12,8 @@
 // See the License for the specific language governing permissions and
 //   limitations under the License.
 //
-using System;
-using System.Collections.Generic;
+
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RentalSol.Data.Entities
 {
@@ -44,7 +40,11 @@ namespace RentalSol.Data.Entities
         public string PostalCode { get; set; }
         public string PostalCountry { get; set; }
         public string Notes { get; set; }
-        public Guid? CompanyId { get; set; }
+
+        public int? CompanyId { get; set; }
         public virtual Company Company { get; set; }
+
+        public int? ServiceProviderId { get; set; }
+        public virtual ServiceProvider ServiceProvider { get; set; }
     }
 }

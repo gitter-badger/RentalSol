@@ -13,13 +13,8 @@
 //   limitations under the License.
 //
 using RentalSol.Data.Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RentalSol.Data
 {
@@ -36,11 +31,17 @@ namespace RentalSol.Data
         public DbSet<Company> Company { get; set; }
         public DbSet<Contact> Contact { get; set; }
         public DbSet<Property> Property { get; set; }
+        public DbSet<Lease> Lease { get; set; }
+        public DbSet<ServiceProvider> ServiceProvider { get; set; }
+        public DbSet<Account> Account { get; set; }
 
         //OnModelCreating
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
+
     }
 }

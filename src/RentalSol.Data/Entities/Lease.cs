@@ -12,24 +12,29 @@
 // See the License for the specific language governing permissions and
 //   limitations under the License.
 //
+using System;
 
 namespace RentalSol.Data.Entities
 {
-    class Property
+    class Lease
     {
         public int Id { get; set; }
-        public string AddressLine1 { get; set; }
-        public string AddressLine2 { get; set; }
-        public string CityTown { get; set; }
-        public string ProvinceState { get; set; }
-        public string Code { get; set; }
-        public string Country { get; set; }
-        public string Description { get; set; }
-        public int TypeId { get; set; }
-        public virtual ListOfValue Type { get; set; }
+        public string LeaseName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public decimal Deposit { get; set; }
+        public decimal LeaseFee { get; set; }
+        public decimal Rate { get; set; }
+        public string Frequency { get; set; }
+        public string Note { get; set; }
 
-        public int OwnerId { get; set; }
-        public virtual Contact Owner { get; set; }
+        public int LessorId { get; set; }
+        public virtual Contact Lessor { get; set; }
 
+        public int LesseeId { get; set; }
+        public virtual Contact Lessee { get; set; }
+
+        public int PropertyId { get; set; }
+        public virtual Property Property { get; set; }
     }
 }

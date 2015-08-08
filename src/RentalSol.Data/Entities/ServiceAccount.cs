@@ -13,23 +13,10 @@
 //   limitations under the License.
 //
 
+
 namespace RentalSol.Data.Entities
 {
-    class Property
+    class ServiceAccount
     {
-        public int Id { get; set; }
-        public string AddressLine1 { get; set; }
-        public string AddressLine2 { get; set; }
-        public string CityTown { get; set; }
-        public string ProvinceState { get; set; }
-        public string Code { get; set; }
-        public string Country { get; set; }
-        public string Description { get; set; }
-        public int TypeId { get; set; }
-        public virtual ListOfValue Type { get; set; }
-
-        public int OwnerId { get; set; }
-        public virtual Contact Owner { get; set; }
-
     }
 }
