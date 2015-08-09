@@ -60,10 +60,6 @@
     <Compile Include="Entities\Property.cs" />
     <Compile Include="Entities\ServiceAccount.cs" />
     <Compile Include="Entities\ServiceProvider.cs" />
-    <Compile Include="Migrations\201508082251187_Work.cs" />
-    <Compile Include="Migrations\201508082251187_Work.Designer.cs">
-      <DependentUpon>201508082251187_Work.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentalSolContext.cs" />
@@ -73,11 +69,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201508082251187_Work.resx">
-      <DependentUpon>201508082251187_Work.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
